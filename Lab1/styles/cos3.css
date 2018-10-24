@@ -1,0 +1,28 @@
+h2 {
+	margin: 0;
+	padding: 20px 0;    
+	color: white;
+	text-shadow: 3px 3px 1px black;
+}
+article{
+	background-color: gray;
+}
+html{
+	background-color: blue;
+
+}
+body {
+
+	width: 600px;
+	background-color: orange;	
+	margin: 25px;
+	padding: 0px 20px 5px 20px;
+	border: 5px solid black;
+
+}
+img{
+	displey: block;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+}

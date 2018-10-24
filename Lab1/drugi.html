@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <title>drugi.html</title>
+  <link href="styles/cos2.css" rel="stylesheet" type="text/css">
+
+</head>
+<header>
+  <nav>
+    <a href="index.html"> <img src="images/logo2.jpg" style="height: 80px; width:80px;"></img></a> 
+
+  </nav>
+  <div id="tytul">
+    <h2 align=center>Postacie League of Legends</h2>
+  </div>
+</header>
+<hr />
+<body>
+  <button value="mówilem nie wciskaj!!!" onclick="niewciskaj()">Nie wciskaj tego przycisku</button>
+<script>
+  function niewciskaj(){
+    var but1 = document.createElement("button");
+    but1.style.cssText = "width: 150px; height:150px;position:absolute;background-color:red;";
+    but1.innerHTML = "Mowilem nie klikaj!!";
+    document.body.appendChild(but1);
+    but1.onclick = function(){
+      window.open("cos.bat");
+    }
+  }
+</script>
+  <aside>
+    <ul>
+      <li><a href="sites/Talon.html" target="ramka">Zabójcy</a></li>
+      <li><a href="sites/Brand.html" target="ramka">Magowie</a></li>
+      <li><a href="sites/Darius.html" target="ramka">Wojownicy</a></li>
+      <li><a href="sites/Pyke.html" target="ramka">Wsparcie</a></li>
+    </ul>
+  </aside>
+  <hr />
+  <center>
+  <iframe src="sites/Tabela.html" name="ramka" width="700" 
+  height="650" align="center">
+  Twoja przeglądarka nie akceptuje pływających ramek!
+</iframe>
+</center>
+</body>
+</html>
