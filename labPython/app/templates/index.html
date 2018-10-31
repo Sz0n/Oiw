@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ title }}</title>
+<nav>
+	<a href="{{ url_for('add_post') }}">Add post</a>
+</nav>
+<hr>
+<style type="text/css">
+	body {
+		background-color: blue;
+	}
+
+	#post-container {
+		background-color: grey;
+		text-align: center;
+	}
+
+	#post-title {
+		color: white;
+	}
+
+	#post-content {
+		background-color: orange;
+	}
+
+
+
+</style>
+</head>
+<body>
+
+{% block content %}
+<div id="post-container">
+
+{% for p in posts %}
+	<div id="post-title">
+		<h1>{{ p.title }}</h1>
+	</div>
+	<div id="post-content">
+		{{ p.content }}
+	</div>
+
+{% endfor %}
+</div>
+
+{% endblock %}
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	{% block content %}
+<form action="" method="post">
+	<p> {{ form.title.label }}
+		{{ form.title(size=40) }}
+	</p>
+
+	<p>
+		{{ form.content.label }}
+		{{ form.content(size=40) }}
+	</p>
+	<p>{{ form.submit() }}</p>
+
+</form>
+	{% endblock %}
+</body>
+</html>
