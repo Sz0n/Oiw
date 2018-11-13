@@ -1,12 +1,29 @@
+{% extends "bootstrap/base.html" %}
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Add post</title>
 </head>
 <body>
-
 	{% block content %}
-<form action="" method="post">
+
+<center><span class="badge badge-secondary"><h3>Add post</h3></span></center>
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Title</label>
+    <input type="textarea" class="form-control" id="exampleFormControlInput1" placeholder="Post title">
+  </div>
+
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1" size=500>Content</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Content"></textarea>
+  </div>
+  <p>{{ form.submit() }}</p>
+</form>
+
+<!-- <form action="" method="post">
 	<p> {{ form.title.label }}
 		{{ form.title(size=40) }}
 	</p>
@@ -17,7 +34,7 @@
 	</p>
 	<p>{{ form.submit() }}</p>
 
-</form>
+</form> -->
 	{% endblock %}
 </body>
 </html>
