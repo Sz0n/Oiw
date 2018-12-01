@@ -3,7 +3,12 @@
 <head>
 	<title>{{ title }}</title>
 <nav>
-	<a href="{{ url_for('add_post') }}">Add post</a>
+	{% if current_user.is_anonymous %}
+    <a href="{{ url_for('login') }}">Login</a>
+    {% else %}
+    <a href="{{ url_for('add_post') }}">Add post</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    {% endif %}
 </nav>
 <hr>
 <style type="text/css">
