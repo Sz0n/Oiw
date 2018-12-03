@@ -1,5 +1,19 @@
+{% extends "bootstrap/base.html" %}
+
 {% block content %}
-    <h1>Register</h1>
+    <span class="badge badge-pill"><a style="color:white" href="{{ url_for('index') }}">Posts</a></span>
+
+    <style type="text/css">
+        .form-control{
+            width: 50%;
+        }
+        .badge{
+            background-color: #337ab7
+        }
+    </style>
+<center>
+    <span class="badge badge-pill badge-primary"><h3>Register</h3></span>
+   
     <form action="" method="post">
         {{ form.hidden_tag() }}
         <p>
@@ -30,6 +44,8 @@
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
         </p>
-        <p>{{ form.submit() }}</p>
+        <p><button type="submit" class="btn btn-primary">Register</button></p>
+        <!--<p>{{ form.submit() }}</p>-->
     </form>
+</center>
 {% endblock %}

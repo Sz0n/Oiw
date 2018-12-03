@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>{{ title }}</title>
 <nav>
 	{% if current_user.is_anonymous %}
-    <a href="{{ url_for('login') }}">Login</a>
+	<a href="{{ url_for('login') }}">Login</a>
     {% else %}
     <a href="{{ url_for('add_post') }}">Add post</a>
     <a href="{{ url_for('logout') }}">Logout</a>
@@ -29,6 +30,12 @@
 		background-color: orange;
 	}
 
+	.form-control{
+		width: 50%;
+	}
+	.badge{
+		background-color: #337ab7
+	}
 	a {
 		color: black;
 		background-color: orange;
